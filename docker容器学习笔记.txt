@@ -30,5 +30,15 @@ http://127.0.0.1/Home/Index/readcategorymsg?category[0]=bind&category[1]=0 and (
 注意：当DEBUG模式关闭时，不会显示报错信息！
 
 
+yum安装python3.6
+yum install https://centos7.iuscommunity.org/ius-release.rpm -y 
+yum install python36u -y 
+ln -s /bin/python3.6 /bin/python3
+yum install python36u-pip -y 
+ln -s /bin/pip3.6 /bin/pip3
+
+
+
+
 
 
