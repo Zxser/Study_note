@@ -1,0 +1,41 @@
+程序自动化	
+AS-i BSAP CC-Link CIP CAN CANopen DeviceNet ControlNet DF-1 DirectNET EtherCAT Ethernet Global Data (EGD) Ethernet Powerlink EtherNet/IP Factory Instrumentation Protocol FINS FOUNDATION fieldbus H1 HSE GE SRTP HART Protocol Honeywell SDS HostLink INTERBUS MECHATROLINK MelsecNet Modbus Optomux PieP Profibus PROFINET IO RAPIEnet SERCOS interface SERCOS III Sinec H1 SynqNet TTEthernet
+工业控制系统	
+MTConnect OPC DA OPC HDA OPC UA
+智能建筑	
+1-Wire BACnet C-Bus DALI DSI DyNet Factory Instrumentation Protocol KNX LonTalk Modbus oBIX VSCP X10 xAP xPL ZigBee
+电力系统	
+IEC 60870-5-103 IEC 60870-5 IEC 60870-6 DNP3 Factory Instrumentation Protocol IEC 61850 IEC 62351 Modbus Profibus
+自动抄表	
+ANSI C12.18 IEC 61107 DLMS/IEC 62056 M-Bus Modbus ZigBee
+车辆总线	
+AFDX ARINC 429 CAN ARINC 825 SAE J1939 NMEA 2000 FMS Factory Instrumentation Protocol FlexRay IEBus J1587 J1708 Keyword Protocol 2000 UDS LIN MOST VAN
+
+
+
+0x01专业术语
+SCADA：数据采集与监视控制系统
+
+ICS：工业控制系统
+
+DCS：分布式控制系统/集散控制系统
+
+PCS：过程控制系统
+
+ESD：应急停车系统
+
+PLC：可编程序控制器(Programmable Logic Controller)
+
+RTU：远程终端控制系统
+
+IED：智能监测单元
+
+HMI：人机界面(Human Machine Interface)
+
+MIS：管理信息系统(Management Information System)
+
+SIS： 生产过程自动化监控和管理系统（Supervisory Information System）
+
+MES：制造执行管理系统
+
+ 

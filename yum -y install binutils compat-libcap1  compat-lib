@@ -1,0 +1,77 @@
+yum -y install binutils compat-libcap1  compat-libstdc++-33 compat-libstdc++-33*.i686 elfutils-libelf-devel gcc gcc-c++ glibc*.i686 glibc glibc-devel glibc-devel*.i686 ksh libgcc*.i686 libgcc libstdc++ libstdc++*.i686 libstdc++-devel libstdc++-devel*.i686 libaio libaio*.i686 libaio-devel libaio-devel*.i686 make sysstat unixODBC unixODBC*.i686 unixODBC-devel unixODBC-devel*.i686 libXp
+
+
+
+yum -y install binutils 
+yum -y install  compat-libcap1 
+yum install -y gcc gcc-c++ glibc.i686  glibc.x86_64  glibc-devel.i686  glibc-devel.x86_64 
+yum install -y libaio.i686 libaio.x86_64 libaio-devel.i686 libaio-devel.x86_64 
+yum install -y libgcc.i686 libgcc.x86_64 libstdc++.i686 libstdc++.x86_64  libstdc++-devel.i686  libstdc++-devel.x86_64 
+yum install -y libXi.i686  libXi.x86_64  libXtst.i686     libXtst.x86_64  
+yum install -y make 
+yum install -y sysstat 
+yum install -y unixODBC.i686  unixODBC.x86_64 unixODBC-devel.i686  unixODBC-devel.x86_64
+
+
+
+wget  http://vault.centos.org/5.11/os/x86_64/CentOS/pdksh-5.2.14-37.el5_8.1.x86_64.rpm
+http://mirror.centos.org/centos/7/os/x86_64/Packages/ksh-20120801-139.el7.x86_64.rpm
+
+
+
+
+
+su oracle -lc "/u01/oracle/app/product/11.2.0/dbhome_1/bin/lsnrctl start"
+su oracle -lc "/u01/oracle/app/product/11.2.0/dbhome_1/bin/dbstart"
+
+
+su oracle -lc "/oracle/app/product/11.2.0/dbhome_1/bin/lsnrctl start"
+
+/u01/oracle/app/product/11.2.0/dbhome_1/bin/dbstart
+
+
+
+
+
+
+#!/bin/sh
+# chkconfig: 345 61 61
+# description: Oracle 11g R2 AutoRun Servimces
+# /etc/init.d/oracle
+#
+# Run-level Startup script for the Oracle Instance, Listener, and
+# Web Interface
+export ORACLE_BASE=/oracle/app
+export ORACLE_HOME=$ORACLE_BASE/product/11.2.0/dbhome_1
+export ORACLE_SID=ORCL
+export PATH=$PATH:$ORACLE_HOME/bin
+ORA_OWNR="oracle"
+# if the executables do not exist -- display error
+if [ ! -f $ORACLE_HOME/bin/dbstart -o ! -d $ORACLE_HOME ]
+then
+echo "Oracle startup: cannot start"
+exit 1
+fi
+# depending on parameter -- startup, shutdown, restart
+# of the instance and listener or usage display
+case "$1" in
+start)
+# Oracle listener and instance startup
+su $ORA_OWNR -lc $ORACLE_HOME/bin/dbstart
+echo "Oracle Start Succesful!OK."
+;;
+stop)
+# Oracle listener and instance shutdown
+su $ORA_OWNR -lc $ORACLE_HOME/bin/dbshut
+echo "Oracle Stop Succesful!OK."
+;;
+reload|restart)
+$0 stop
+$0 start
+;;
+*)
+echo $"Usage: `basename $0` {start|stop|reload|reload}"
+exit 1
+esac
+exit 0
+
